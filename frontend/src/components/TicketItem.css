@@ -1,0 +1,163 @@
+.ticket-item {
+    border: 1px solid #d1dceb;
+    border-radius: 11px;
+    background: #ffffff;
+    padding: 0.8rem;
+    transition: var(--transition);
+    animation: fadeIn 0.24s ease both;
+}
+
+.ticket-item:hover {
+    border-color: #bfd0e7;
+    box-shadow: 0 10px 20px rgba(33, 57, 94, 0.09);
+    transform: translateY(-1px);
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.42rem;
+}
+
+.ticket-title {
+    margin: 0;
+    font-size: 0.97rem;
+    color: #1f324d;
+}
+
+.ticket-id {
+    color: #8096b4;
+    font-size: 0.77rem;
+    font-weight: 600;
+}
+
+.ticket-description {
+    margin: 0 0 0.65rem;
+    font-size: 0.83rem;
+    color: #587096;
+    line-height: 1.45;
+}
+
+.ticket-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.65rem;
+    padding-bottom: 0.64rem;
+    border-bottom: 1px solid #dce5f2;
+}
+
+.ticket-badges {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    border: 1px solid currentColor;
+    border-radius: 7px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.42rem;
+}
+
+.ticket-date {
+    font-size: 0.74rem;
+    color: #86a0c5;
+}
+
+.ticket-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.status-selector {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.32rem;
+}
+
+.status-label {
+    font-size: 0.76rem;
+    color: #6580a4;
+    font-weight: 600;
+}
+
+.status-wrap {
+    position: relative;
+}
+
+.status-dot {
+    position: absolute;
+    left: 0.45rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.status-select {
+    height: 30px;
+    border-radius: 8px;
+    border: 2px solid #c4d4e8;
+    background: #f8fbff;
+    color: #3a5479;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 0 0.42rem 0 1.05rem;
+    min-width: 135px;
+}
+
+.status-select:focus {
+    outline: none;
+}
+
+.delete-btn {
+    background: #fff0f0;
+    border: 1.5px solid #ffc7c7;
+    border-radius: 7px;
+    color: #d63649;
+    font-size: 1.1rem;
+    padding: 0.32rem 0.55rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+.delete-btn:hover:not(:disabled) {
+    background: #ffe0e0;
+    border-color: #ff9999;
+    transform: scale(1.05);
+}
+
+.delete-btn:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.delete-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.status-select:disabled {
+    opacity: 0.65;
+}
+
+@media (max-width: 640px) {
+    .ticket-header,
+    .ticket-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ticket-actions {
+        justify-content: flex-start;
+    }
+}
