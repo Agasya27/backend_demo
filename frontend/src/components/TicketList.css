@@ -1,0 +1,148 @@
+.ticket-list {
+    padding: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.filters-section {
+    border: 1px solid #d8e2ef;
+    border-radius: 11px;
+    background: #f8fbff;
+    padding: 0.65rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.58rem;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.68rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+}
+
+.search-input {
+    width: 100%;
+    height: 38px;
+    border-radius: 8px;
+    border: 1px solid #ccd8ea;
+    background: #ffffff;
+    color: #20334f;
+    padding: 0 0.75rem 0 2rem;
+    font-size: 0.87rem;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #8ba9d3;
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+.filter-select {
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid #ccd8ea;
+    background: #ffffff;
+    color: #42597d;
+    font-size: 0.79rem;
+    padding: 0 0.4rem;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #8ba9d3;
+}
+
+.ticket-list-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.results-chip {
+    font-size: 0.74rem;
+    color: #5a7397;
+    font-weight: 700;
+}
+
+.clear-filters-btn {
+    border: 1px solid #cfdaeb;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #5f7496;
+    padding: 0.22rem 0.46rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.clear-filters-btn:hover {
+    background: #f3f7ff;
+}
+
+.tickets-container {
+    min-height: 430px;
+}
+
+.loading-state,
+.empty-state {
+    min-height: 240px;
+    border: 1px solid #d8e2ef;
+    border-radius: 11px;
+    background: #f6f9ff;
+    color: #5b7397;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.spinner-large {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 4px solid #d6e1f3;
+    border-top-color: #4f85e6;
+    animation: spin 0.75s linear infinite;
+    margin-bottom: 0.72rem;
+}
+
+.empty-icon {
+    font-size: 2.1rem;
+    margin-bottom: 0.45rem;
+    opacity: 0.6;
+}
+
+.empty-state h3 {
+    margin: 0 0 0.18rem;
+    color: #2a3c57;
+}
+
+.empty-state p {
+    margin: 0;
+    font-size: 0.84rem;
+}
+
+.tickets-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.62rem;
+}
+
+@media (max-width: 768px) {
+    .filters-grid {
+        grid-template-columns: 1fr;
+    }
+}
