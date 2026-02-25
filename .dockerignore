@@ -1,0 +1,28 @@
+# This file tells Docker what to ignore during builds
+# The Dockerfile is for local development with docker-compose only
+
+.git
+.gitignore
+README.md
+DEPLOYMENT.md
+*.md
+.env
+.env.local
+.env.*.local
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.venv
+venv/
+ENV/
+env/
+node_modules/
+.DS_Store
+*.log
+db.sqlite3
+staticfiles/
+.vscode
+.idea
